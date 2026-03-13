@@ -1,0 +1,15 @@
+{
+  "device": "iphone",
+  "model_list": [
+    {
+      "model": "HF://mlc-ai/Phi-3-mini-4k-instruct-q4f16_1-MLC",
+      "model_id": "Phi-3-mini-4k-instruct-q4f16_1-MLC",
+      "estimated_vram_bytes": 3000000000,
+      "overrides": {
+        "prefill_chunk_size": 128,
+        "context_window_size": 4096
+      },
+      "bundle_weight": false
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "modelPath": "bundle",
+  "modelLib": "model_iphone",
+  "systemPrompt": "You are a helpful, concise voice assistant.",
+  "maxTokens": 256,
+  "temperature": 0.7
+}

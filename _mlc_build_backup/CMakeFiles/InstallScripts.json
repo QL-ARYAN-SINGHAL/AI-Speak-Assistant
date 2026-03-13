@@ -1,0 +1,14 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/app/Desktop/AIVoiceAssistant/AIVoiceAssistant/build/cmake_install.cmake",
+		"/Users/app/Desktop/AIVoiceAssistant/AIVoiceAssistant/build/tvm/cmake_install.cmake",
+		"/Users/app/Desktop/AIVoiceAssistant/AIVoiceAssistant/build/tvm/3rdparty/tvm-ffi/cmake_install.cmake",
+		"/Users/app/Desktop/AIVoiceAssistant/AIVoiceAssistant/build/tokenizers/cmake_install.cmake",
+		"/Users/app/Desktop/AIVoiceAssistant/AIVoiceAssistant/build/tokenizers/msgpack/cmake_install.cmake",
+		"/Users/app/Desktop/AIVoiceAssistant/AIVoiceAssistant/build/tokenizers/sentencepiece/cmake_install.cmake",
+		"/Users/app/Desktop/AIVoiceAssistant/AIVoiceAssistant/build/tokenizers/sentencepiece/src/cmake_install.cmake",
+		"/Users/app/Desktop/AIVoiceAssistant/AIVoiceAssistant/build/tokenizers/sentencepiece/third_party/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
