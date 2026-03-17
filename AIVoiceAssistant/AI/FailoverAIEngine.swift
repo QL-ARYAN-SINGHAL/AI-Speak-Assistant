@@ -10,14 +10,14 @@ final class FailoverAIEngine: LocalAIEngine {
     }
 
     convenience init?(config: RemoteAIConfig) {
-        let geminiKey = (config.geminiApiKey ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
+        let openaiKey = (config.openaiApiKey ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
         let groqKey = (config.groqApiKey ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
 
-        let geminiEndpoint = (config.geminiEndpoint ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
-        let geminiEngine: LocalAIEngine? = geminiKey.isEmpty ? nil : GeminiRemoteAIEngine(
-            apiKey: geminiKey,
-            model: config.geminiModel ?? "gemini-2.0-flash",
-            endpoint: geminiEndpoint.isEmpty ? nil : geminiEndpoint
+        let openaiEndpoint = (config.openaiEndpoint ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
+        let openaiEngine: LocalAIEngine? = openaiKey.isEmpty ? nil : OpenAIRemoteAIEngine(
+            apiKey: openaiKey,
+            model: config.openaiModel ?? "gpt-4o-mini",
+            endpoint: openaiEndpoint.isEmpty ? nil : URL(string: openaiEndpoint)
         )
 
         let groqEndpoint = (config.groqEndpoint ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
@@ -27,8 +27,8 @@ final class FailoverAIEngine: LocalAIEngine {
             endpoint: groqEndpoint.isEmpty ? nil : groqEndpoint
         )
 
-        if let geminiEngine = geminiEngine {
-            self.init(primary: geminiEngine, fallback: groqEngine)
+        if let openaiEngine = openaiEngine {
+            self.init(primary: openaiEngine, fallback: groqEngine)
             return
         }
         if let groqEngine = groqEngine {

@@ -2,20 +2,20 @@ import Foundation
 
 enum VoiceAssistantBootstrap {
     static func makeViewModel() -> VoiceAssistantViewModel {
-        if let remoteConfig = RemoteAIConfig.loadFromBundle() {
-            if let remoteEngine = FailoverAIEngine(config: remoteConfig) {
-                let prompt = remoteConfig.systemPrompt ?? "You are a helpful, concise voice assistant."
-                let service = DefaultLLMService(engine: remoteEngine, systemPrompt: prompt)
-                return VoiceAssistantViewModel(manager: VoiceConversationManager(llmService: service))
-            }
+        let store = RemoteAIConfigStore()
+
+        if let localConfig = RemoteAIConfig.loadFromBundle() {
+            store.update(localConfig)
         }
 
-        let fallbackService = DefaultLLMService(
-            engine: SimpleLocalAIEngine(),
-            systemPrompt: "You are a helpful, concise voice assistant."
-        )
-        let vm = VoiceAssistantViewModel(manager: VoiceConversationManager(llmService: fallbackService))
-        vm.setError("No remote AI configured. Add RemoteAIConfig.json.")
-        return vm
+        let remoteProvider = FirebaseRemoteConfigProvider(store: store)
+        Task {
+            await remoteProvider.fetchAndActivate()
+        }
+
+        let prompt = store.currentConfig()?.systemPrompt ?? "You are a helpful, concise voice assistant."
+        let engine = DynamicRemoteAIEngine(store: store, fallback: SimpleLocalAIEngine())
+        let service = DefaultLLMService(engine: engine, systemPrompt: prompt)
+        return VoiceAssistantViewModel(manager: VoiceConversationManager(llmService: service))
     }
 }

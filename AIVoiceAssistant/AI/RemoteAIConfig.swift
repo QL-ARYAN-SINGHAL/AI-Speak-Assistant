@@ -1,16 +1,34 @@
 import Foundation
 
 struct RemoteAIConfig: Decodable {
-    let geminiApiKey: String?
+    let openaiApiKey: String?
     let groqApiKey: String?
-    let geminiModel: String?
+    let openaiModel: String?
     let groqModel: String?
-    let geminiEndpoint: String?
+    let openaiEndpoint: String?
     let groqEndpoint: String?
     let systemPrompt: String?
 
-    var hasGeminiKey: Bool {
-        let key = (geminiApiKey ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
+    init(
+        openaiApiKey: String?,
+        groqApiKey: String?,
+        openaiModel: String?,
+        groqModel: String?,
+        openaiEndpoint: String?,
+        groqEndpoint: String?,
+        systemPrompt: String?
+    ) {
+        self.openaiApiKey = openaiApiKey
+        self.groqApiKey = groqApiKey
+        self.openaiModel = openaiModel
+        self.groqModel = groqModel
+        self.openaiEndpoint = openaiEndpoint
+        self.groqEndpoint = groqEndpoint
+        self.systemPrompt = systemPrompt
+    }
+
+    var hasOpenAIKey: Bool {
+        let key = (openaiApiKey ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
         return !key.isEmpty
     }
 

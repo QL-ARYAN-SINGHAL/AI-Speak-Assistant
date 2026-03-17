@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1020128021766-i0tussjfi66sgpk8o6phsmbgac1fgm1h.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1020128021766-i0tussjfi66sgpk8o6phsmbgac1fgm1h</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>1020128021766-263ga27a4neb5oojciplgbq0f6hjss7m.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyACErVzYtolcDRiTYQKHWJNep1dEzz_7hs</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1020128021766</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.fulcrum.app</string>
+	<key>PROJECT_ID</key>
+	<string>e-commerce-3b836</string>
+	<key>STORAGE_BUCKET</key>
+	<string>e-commerce-3b836.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>New item</key>
+	<string></string>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1020128021766:ios:00406b1e3b27369bfc6287</string>
+</dict>
+</plist>

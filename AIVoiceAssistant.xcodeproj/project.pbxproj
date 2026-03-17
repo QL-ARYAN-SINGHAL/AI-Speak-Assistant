@@ -6,6 +6,17 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DDB42EC12F6439490000E4FC /* FirebaseAI in Frameworks */ = {isa = PBXBuildFile; productRef = DDB42EC02F6439490000E4FC /* FirebaseAI */; };
+		DDB42EC32F6439490000E4FC /* FirebaseAILogic in Frameworks */ = {isa = PBXBuildFile; productRef = DDB42EC22F6439490000E4FC /* FirebaseAILogic */; };
+		DDB42EC52F6439490000E4FC /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DDB42EC42F6439490000E4FC /* FirebaseAuth */; };
+		DDB42EC72F6439490000E4FC /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = DDB42EC62F6439490000E4FC /* FirebaseAuthCombine-Community */; };
+		DDB42EC92F6439490000E4FC /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = DDB42EC82F6439490000E4FC /* FirebaseCore */; };
+		DDB42ECB2F6439490000E4FC /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = DDB42ECA2F6439490000E4FC /* FirebaseDatabase */; };
+		DDB42ECD2F6439490000E4FC /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = DDB42ECC2F6439490000E4FC /* FirebaseRemoteConfig */; };
+		DDB42ECF2F6439490000E4FC /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = DDB42ECE2F6439490000E4FC /* FirebaseStorage */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		DD51EF352F63DAE100C65246 /* AIVoiceAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIVoiceAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD51EF962F63F61D00C65246 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -24,6 +35,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDB42ECB2F6439490000E4FC /* FirebaseDatabase in Frameworks */,
+				DDB42EC32F6439490000E4FC /* FirebaseAILogic in Frameworks */,
+				DDB42EC92F6439490000E4FC /* FirebaseCore in Frameworks */,
+				DDB42ECD2F6439490000E4FC /* FirebaseRemoteConfig in Frameworks */,
+				DDB42EC52F6439490000E4FC /* FirebaseAuth in Frameworks */,
+				DDB42ECF2F6439490000E4FC /* FirebaseStorage in Frameworks */,
+				DDB42EC12F6439490000E4FC /* FirebaseAI in Frameworks */,
+				DDB42EC72F6439490000E4FC /* FirebaseAuthCombine-Community in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +86,14 @@
 			);
 			name = AIVoiceAssistant;
 			packageProductDependencies = (
+				DDB42EC02F6439490000E4FC /* FirebaseAI */,
+				DDB42EC22F6439490000E4FC /* FirebaseAILogic */,
+				DDB42EC42F6439490000E4FC /* FirebaseAuth */,
+				DDB42EC62F6439490000E4FC /* FirebaseAuthCombine-Community */,
+				DDB42EC82F6439490000E4FC /* FirebaseCore */,
+				DDB42ECA2F6439490000E4FC /* FirebaseDatabase */,
+				DDB42ECC2F6439490000E4FC /* FirebaseRemoteConfig */,
+				DDB42ECE2F6439490000E4FC /* FirebaseStorage */,
 			);
 			productName = AIVoiceAssistant;
 			productReference = DD51EF352F63DAE100C65246 /* AIVoiceAssistant.app */;
@@ -97,6 +124,7 @@
 			mainGroup = DD51EF2C2F63DAE100C65246;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
+				DDB42EBF2F6439490000E4FC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DD51EF362F63DAE100C65246 /* Products */;
@@ -257,7 +285,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MYG92X5P93;
+				DEVELOPMENT_TEAM = 8SZ27954MH;
 				ENABLE_PREVIEWS = YES;
 				EXCLUDED_RESOURCE_FILE_NAMES = "build/** dist/**";
 				EXCLUDED_SOURCE_FILE_NAMES = (
@@ -266,8 +294,8 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Info.plist;
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app needs access to microphone";
-				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "This app uses speech recognition to convert your voice into text notes";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app needs microphone access for voice conversation.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "This app needs speech recognition for voice conversation.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -278,11 +306,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Kakarot-s-Organisation.AIVoiceAssistant";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fulcrum.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -301,7 +327,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MYG92X5P93;
+				DEVELOPMENT_TEAM = 8SZ27954MH;
 				ENABLE_PREVIEWS = YES;
 				EXCLUDED_RESOURCE_FILE_NAMES = "build/** dist/**";
 				EXCLUDED_SOURCE_FILE_NAMES = (
@@ -310,8 +336,8 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Info.plist;
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app needs access to microphone";
-				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "This app uses speech recognition to convert your voice into text notes";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app needs microphone access for voice conversation.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "This app needs speech recognition for voice conversation.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -322,11 +348,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Kakarot-s-Organisation.AIVoiceAssistant";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fulcrum.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -361,6 +385,59 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		DDB42EBF2F6439490000E4FC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.10.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DDB42EC02F6439490000E4FC /* FirebaseAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DDB42EBF2F6439490000E4FC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAI;
+		};
+		DDB42EC22F6439490000E4FC /* FirebaseAILogic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DDB42EBF2F6439490000E4FC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAILogic;
+		};
+		DDB42EC42F6439490000E4FC /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DDB42EBF2F6439490000E4FC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		DDB42EC62F6439490000E4FC /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DDB42EBF2F6439490000E4FC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
+		};
+		DDB42EC82F6439490000E4FC /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DDB42EBF2F6439490000E4FC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		DDB42ECA2F6439490000E4FC /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DDB42EBF2F6439490000E4FC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		DDB42ECC2F6439490000E4FC /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DDB42EBF2F6439490000E4FC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+		DDB42ECE2F6439490000E4FC /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DDB42EBF2F6439490000E4FC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DD51EF2D2F63DAE100C65246 /* Project object */;
 }

@@ -46,7 +46,7 @@ struct ContentView: View {
                 Text("Local Voice Assistant")
                     .font(.custom("AvenirNext-DemiBold", size: 20))
                     .foregroundColor(.white)
-                Text("Gemini with Groq fallback")
+            Text("OpenAI with Groq fallback")
                     .font(.custom("AvenirNext-Regular", size: 12))
                     .foregroundColor(Color.white.opacity(0.6))
             }
@@ -129,6 +129,7 @@ struct ContentView: View {
         )
     }
 
+
     private var statusColor: Color {
         switch viewModel.state {
         case .idle:
@@ -151,6 +152,7 @@ struct ContentView: View {
             viewModel.stop()
         }
     }
+
 }
 
 #Preview {
